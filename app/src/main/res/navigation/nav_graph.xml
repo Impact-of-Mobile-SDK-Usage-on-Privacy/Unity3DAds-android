@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/app_start">
+
+    <fragment
+        android:id="@+id/app_start"
+        android:name="de.tubs.cs.ias.unity3dandroidtestbed.AppStart"
+        android:label="App Start"
+        tools:layout="@layout/fragment_appstart">
+
+        <action
+            android:id="@+id/action_app_start_to_create_object"
+            app:destination="@id/create_object" />
+    </fragment>
+    <fragment
+        android:id="@+id/create_object"
+        android:name="de.tubs.cs.ias.unity3dandroidtestbed.CreateObject"
+        android:label="Create Object"
+        tools:layout="@layout/fragment_create_object">
+
+        <action
+            android:id="@+id/action_create_object_to_consent"
+            app:destination="@id/consent" />
+    </fragment>
+    <fragment
+        android:id="@+id/consent"
+        android:name="de.tubs.cs.ias.unity3dandroidtestbed.Consent"
+        android:label="Consent"
+        tools:layout="@layout/fragment_consent">
+
+        <action
+            android:id="@+id/action_consent_to_initialize"
+            app:destination="@id/initialize" />
+    </fragment>
+    <fragment
+        android:id="@+id/initialize"
+        android:name="de.tubs.cs.ias.unity3dandroidtestbed.Initialize"
+        android:label="Initialize"
+        tools:layout="@layout/fragment_initialize">
+
+        <action
+            android:id="@+id/action_initialize_to_basic_functionality"
+            app:destination="@id/basic_functionality" />
+    </fragment>
+    <fragment
+        android:id="@+id/basic_functionality"
+        android:name="de.tubs.cs.ias.unity3dandroidtestbed.BasicFunctionality"
+        android:label="Basic Functionality"
+        tools:layout="@layout/fragment_basic_func">
+    </fragment>
+</navigation>
